@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<html>
 <html lang="id" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Programming Module — Modul Praktikum</title>
+    <title>Java Web Module — Fajar Maulana Dwi Putra</title>
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
 :root{--bg-body:#fff9ed;--bg-card:#fff;--text-main:#171717;--text-secondary:#454545;--text-muted:#6d28d9;--border-color:#171717;--shadow-color:#171717;--pattern-color:rgba(23,23,23,.08);--pink:#ff9fc5;--yellow:#ffe66d;--teal:#8be9df;--blue:#8ab8ff;--green:#a7f3a0;--orange:#ffad84;--purple:#c4a1ff;--border-width:3px;--border-radius:14px;--shadow-offset:5px;--font-heading:'Space Grotesk',Arial,sans-serif;--font-body:'Space Grotesk',Arial,sans-serif}
@@ -11,6 +11,67 @@
 .container{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:24px}.neo-box{background:var(--bg-card);border:var(--border-width) solid var(--border-color);border-radius:var(--border-radius);box-shadow:var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);padding:clamp(16px,3vw,30px);position:relative;transition:transform .16s ease,box-shadow .16s ease}.neo-box:hover{transform:translate(-1px,-1px);box-shadow:6px 6px 0 var(--shadow-color)}
 h1,h2,h3,h4,h5{line-height:1.25;letter-spacing:-.025em}h3{font-size:clamp(1.15rem,2vw,1.45rem)}p{margin-top:0}.header-panel{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.student-info{display:flex;flex-wrap:wrap;gap:10px}.info-badge{display:inline-block;padding:7px 12px;border:2px solid var(--border-color);border-radius:8px;box-shadow:3px 3px 0 var(--shadow-color);font-weight:800;color:#171717!important;font-size:.88rem}.nav-container{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:var(--yellow);color:#171717;padding:18px 22px}.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:clamp(1.1rem,2.5vw,1.55rem);letter-spacing:-.04em}.brand-icon{width:25px;height:25px;background:var(--pink);border:3px solid var(--border-color);border-radius:7px;transform:rotate(-5deg)}.nav-links{display:flex;gap:10px;max-width:100%;overflow-x:auto;padding:4px 4px 8px}.nav-link{appearance:none;border:2px solid var(--border-color);border-radius:9px;background:#fff;color:#171717;padding:10px 14px;box-shadow:3px 3px 0 var(--shadow-color);font:700 .88rem var(--font-body);cursor:pointer;white-space:nowrap;transition:transform .15s,box-shadow .15s}.nav-link:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--shadow-color)}.nav-link.active-tab{background:var(--pink);transform:translate(2px,2px);box-shadow:1px 1px 0 var(--shadow-color)}.tab-content{display:none;animation:fadeIn .22s ease}.section-label{display:inline-block;font-size:.82rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:4px 0 18px;padding:7px 11px;background:var(--teal);border:2px solid var(--border-color);border-radius:7px}.badge{display:inline-block;margin-bottom:16px;padding:6px 11px;border:2px solid var(--border-color);border-radius:7px;box-shadow:3px 3px 0 var(--shadow-color);font-size:.8rem;font-weight:800;text-transform:uppercase;color:#171717!important}.layout-split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:18px;margin:22px 0}.code-panel,.explanation-panel{min-width:0;overflow:hidden;border:2px solid var(--border-color);border-radius:10px;box-shadow:4px 4px 0 var(--shadow-color)}.code-panel{display:flex;flex-direction:column}.code-header{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 14px;background:var(--yellow);border-bottom:2px solid var(--border-color);font-size:.82rem;font-weight:800;text-transform:uppercase;color:#171717}.code-container{position:relative;flex:1;min-width:0}.code-block{margin:0;min-height:180px;max-height:400px;overflow:auto;padding:20px 14px;background:#191923;color:#f5f5f5;font:500 .88rem/1.65 Consolas,'Courier New',monospace;text-align:left;white-space:pre}.copy-btn{position:absolute;right:9px;top:9px;z-index:1;padding:6px 9px;border:2px solid #171717;border-radius:6px;background:var(--yellow);color:#171717;font-weight:800;cursor:pointer;box-shadow:2px 2px 0 #171717}.copy-btn:active{transform:translate(2px,2px);box-shadow:none}.token-keyword{color:#ff7897;font-weight:700}.token-string{color:#86efac}.token-comment{color:#a1a1aa;font-style:italic}.token-tag{color:#7dd3fc;font-weight:700}.token-attr{color:#fcd34d}.token-func{color:#c4b5fd}.token-class{color:#f9a8d4}.explanation-panel{padding:18px;background:#f7f2ff;display:flex;flex-direction:column;gap:10px}.explanation-title{font-size:1.05rem;margin:0;padding-bottom:10px;border-bottom:2px solid var(--border-color);text-transform:uppercase}.explanation-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}.explanation-list li{position:relative;padding-left:20px;color:#34303d;font-size:.91rem}.explanation-list li:before{content:'✦';position:absolute;left:0;color:#7c3aed;font-weight:800}.explanation-list strong{color:#171717}.output-label{display:inline-flex;margin:16px 0 10px;padding-bottom:4px;border-bottom:2px solid var(--border-color);font-size:.9rem;font-weight:800;text-transform:uppercase}.output-block{margin-bottom:12px;padding:20px;border:2px dashed var(--border-color);border-radius:10px;background:#fff;color:#171717;overflow-x:auto}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;border:2px solid var(--border-color);border-radius:8px;box-shadow:3px 3px 0 var(--shadow-color);font:800 .9rem var(--font-body);text-transform:uppercase;color:#171717;cursor:pointer;transition:transform .12s,box-shadow .12s}.btn:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--shadow-color)}.btn:active{transform:translate(3px,3px);box-shadow:none}.btn-pink{background:var(--pink)}.btn-teal{background:var(--teal)}.btn-yellow{background:var(--yellow)}.btn-blue{background:var(--blue)}.btn-orange{background:var(--orange)}input[type=text],input[type=email],select,textarea{width:100%;max-width:100%;padding:10px 12px;border:2px solid var(--border-color);border-radius:8px;background:#fff;color:#171717;font:600 .95rem var(--font-body)}input:focus,select:focus,textarea:focus{outline:3px solid rgba(124,58,237,.25);outline-offset:1px}.lesson-list{margin:0 0 20px 22px;padding:0;display:flex;flex-direction:column;gap:7px}.lesson-list li strong{color:#6d28d9}.theme-button-wrap{display:flex;align-items:center}@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:850px){body{padding:16px 10px}.layout-split{grid-template-columns:1fr}.nav-container{align-items:flex-start}.nav-links{width:100%}.neo-box:hover{transform:none;box-shadow:var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color)}}@media(max-width:480px){.student-info{width:100%}.info-badge{font-size:.78rem}.nav-link{font-size:.78rem;padding:8px 10px}.output-block{padding:13px}.code-block{font-size:.8rem}.explanation-panel{padding:14px}}
+
+/* === VARIAN MENU 2: SIDEBAR AKADEMIK MODERN === */
+:root{--bg-body:#f4f7fb;--bg-card:#ffffff;--text-main:#172033;--text-secondary:#526078;--text-muted:#2563eb;--border-color:#dce5f1;--shadow-color:rgba(25,52,91,.08);--pattern-color:transparent;--border-width:1px;--border-radius:16px;--shadow-offset:0px;--pink:#e8efff;--yellow:#edf4ff;--teal:#dff7f1;--blue:#dbeafe;--green:#dcfce7;--orange:#ffedd5;--purple:#ede9fe}
+body{padding:28px 22px;background:linear-gradient(180deg,#f8fbff 0%,#eef3fa 100%);color:var(--text-main)}
+.container{max-width:1440px;display:grid;grid-template-columns:265px minmax(0,1fr);grid-template-rows:auto auto;align-items:start;gap:22px}
+.header-panel{grid-column:1/-1;grid-row:1;padding:0 0 16px;border-bottom:1px solid #dce5f1}
+.student-info{gap:8px}.info-badge{border:1px solid #dce5f1;border-radius:999px;box-shadow:none;padding:7px 13px;font-size:.82rem}
+.nav-container{grid-column:1;grid-row:2;position:sticky;top:18px;z-index:1000;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:22px;padding:22px 16px;background:#fff;border:1px solid #dce5f1;border-radius:18px;box-shadow:0 12px 30px rgba(32,59,99,.07);color:#172033}
+.brand{font-size:1.08rem;letter-spacing:-.02em;padding:0 6px 18px;border-bottom:1px solid #e8eef6}
+.brand-icon{width:32px;height:32px;background:#2563eb;border:0;border-radius:10px;transform:none;position:relative}
+.brand-icon:after{content:'</>';position:absolute;inset:0;display:grid;place-items:center;color:white;font-size:10px;font-weight:800}
+.nav-links{display:flex;flex-direction:column;gap:8px;overflow:visible;padding:0;width:100%;max-width:none}
+.nav-link{width:100%;display:flex;align-items:center;gap:10px;text-align:left;white-space:normal;padding:13px 14px;border:1px solid transparent;border-radius:11px;background:transparent;color:#526078;box-shadow:none;font:600 .9rem var(--font-body);transition:background .16s,color .16s,border-color .16s}
+.nav-link:before{content:'›';font-size:1.2rem;color:#8ba0bd;font-weight:700}
+.nav-link:hover{transform:none;box-shadow:none;background:#f4f7fc;color:#1d4ed8}
+.nav-link.active-tab{background:#eaf1ff;border:1px solid #d5e3ff;color:#1d4ed8;box-shadow:none;transform:none;font-weight:800}
+.nav-link.active-tab:before{content:'●';font-size:.65rem;color:#2563eb}
+.tab-content{grid-column:2;grid-row:2;min-width:0;animation:fadeIn .22s ease}
+.section-label{background:#eaf1ff;border:1px solid #d5e3ff;border-radius:8px;color:#1d4ed8;padding:8px 12px;letter-spacing:.04em}
+.neo-box{border:1px solid #dce5f1;border-radius:16px;box-shadow:0 8px 24px rgba(32,59,99,.05);padding:clamp(18px,2.5vw,30px);background:#fff;transition:box-shadow .18s ease,transform .18s ease}
+.neo-box:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(32,59,99,.09)}
+.badge{border:1px solid #dce5f1;border-radius:7px;box-shadow:none;color:#334155!important;background:#eff6ff!important}
+.code-panel,.explanation-panel{border:1px solid #dce5f1;border-radius:12px;box-shadow:none}
+.code-header{background:#edf4ff;border-bottom:1px solid #dce5f1;color:#334155}
+.explanation-panel{background:#f7f9fd}.explanation-title{border-bottom:1px solid #dce5f1}.explanation-list li:before{color:#2563eb}
+.output-block{border:1px dashed #cbd5e1;border-radius:12px;background:#f8fafc}
+.btn{border:1px solid #cbd5e1;border-radius:9px;box-shadow:0 2px 0 rgba(15,23,42,.08);text-transform:none}
+.btn:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(15,23,42,.08)}
+.copy-btn{border:1px solid #cbd5e1;border-radius:7px;box-shadow:none;background:#eaf1ff;color:#1d4ed8}
+input[type=text],input[type=email],select,textarea{border:1px solid #cbd5e1;border-radius:9px}
+@media(max-width:900px){body{padding:18px 12px}.container{display:flex;flex-direction:column;gap:16px}.header-panel,.nav-container,.tab-content{width:100%;position:static}.nav-container{gap:14px;padding:16px}.brand{padding-bottom:12px}.nav-links{flex-direction:row;overflow-x:auto;padding:2px 2px 8px}.nav-link{width:auto;flex:0 0 auto;white-space:nowrap;padding:10px 12px}.nav-link:before{content:none}.nav-link.active-tab:before{content:none}.neo-box:hover{transform:none}}
+@media(max-width:480px){.student-info{width:100%}.info-badge{font-size:.74rem}.nav-link{font-size:.78rem;padding:9px 11px}.layout-split{grid-template-columns:1fr}}
+
+
+/* Sticky lesson heading: judul mengikuti pertemuan yang sedang dibaca */
+.lesson-sticky-title{position:sticky;top:12px;z-index:50;display:flex;align-items:center;gap:14px;margin:0 0 18px;padding:14px 18px;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border:1px solid #dce5f1;border-radius:14px;box-shadow:0 8px 24px rgba(32,59,99,.10)}
+.lesson-sticky-mark{width:4px;align-self:stretch;min-height:42px;border-radius:99px;background:#2563eb;flex-shrink:0}
+.lesson-sticky-kicker{margin:0 0 3px;color:#2563eb;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.lesson-sticky-title h2{margin:0;color:#172033;font-size:clamp(1rem,2vw,1.25rem);line-height:1.3;letter-spacing:-.025em}
+.lesson-sticky-subtitle{margin:3px 0 0;color:#64748b;font-size:.88rem;line-height:1.4}
+@media(max-width:850px){body{padding:14px 10px}.container{display:flex;flex-direction:column;gap:16px}.header-panel,.nav-container,.tab-content{width:100%;grid-column:auto;grid-row:auto}.nav-container{position:static;top:auto;padding:14px}.nav-links{display:flex;flex-direction:row;overflow-x:auto}.nav-link{width:auto;flex:0 0 auto}.lesson-sticky-title{top:8px;padding:11px 13px;margin-bottom:14px}}
+
+
+/* Dropdown daftar pertemuan: tampil saat hover/focus pada Java Web Module */
+.brand-menu-wrap{position:relative;width:100%;z-index:1001}
+.brand-menu-wrap .brand{width:100%;display:flex;align-items:center;gap:10px;text-align:left;appearance:none;border:0;background:transparent;color:#172033;font:700 1.08rem var(--font-body);cursor:pointer;letter-spacing:-.02em;padding:0 6px 18px;border-bottom:1px solid #e8eef6}
+.brand-menu-wrap .brand-icon{flex:0 0 32px}
+.brand-chevron{margin-left:auto;color:#64748b;font-size:1.2rem;transition:transform .18s ease}
+.lesson-dropdown{display:none;position:absolute;left:0;top:calc(100% + 8px);width:min(340px, calc(100vw - 40px));max-height:min(70vh,620px);overflow:auto;padding:10px;background:#fff;border:1px solid #dce5f1;border-radius:14px;box-shadow:0 18px 42px rgba(25,52,91,.18);z-index:2000}
+.brand-menu-wrap:hover .lesson-dropdown,.brand-menu-wrap:focus-within .lesson-dropdown,.brand-menu-wrap.dropdown-open .lesson-dropdown{display:block}
+.brand-menu-wrap:hover .brand-chevron,.brand-menu-wrap.dropdown-open .brand-chevron{transform:rotate(180deg)}
+.dropdown-heading{padding:8px 10px 10px;color:#94a3b8;font-size:.7rem;font-weight:800;letter-spacing:.1em}
+.lesson-dropdown-list{display:flex;flex-direction:column;gap:3px}
+.lesson-dropdown-item{display:block;width:100%;padding:10px 11px;border:0;border-radius:9px;background:transparent;text-align:left;color:#334155;font:500 .84rem/1.35 var(--font-body);cursor:pointer}
+.lesson-dropdown-item:hover,.lesson-dropdown-item:focus-visible{background:#eff6ff;color:#1d4ed8;outline:none}
+.lesson-dropdown-item strong{display:block;color:#1d4ed8;font-size:.76rem;margin-bottom:3px}
+.lesson-dropdown-item span{display:block}
+/* The detailed dropdown replaces the three abbreviated group buttons */
+.nav-container > .nav-links{display:none}
+@media(max-width:900px){.nav-container{z-index:1000}.nav-container > .nav-links{display:none}.lesson-dropdown{position:static;width:100%;max-height:55vh;margin-top:8px;box-shadow:0 8px 22px rgba(25,52,91,.10)}.brand-menu-wrap{width:100%}.brand-menu-wrap .brand{padding-bottom:12px}}
+
 </style>
 </head>
 <body>
@@ -27,9 +88,16 @@ h1,h2,h3,h4,h5{line-height:1.25;letter-spacing:-.025em}h3{font-size:clamp(1.15re
 
         <!-- NAVIGATION CONTAINER (TABS) -->
         <div class="neo-box nav-container">
-            <div class="brand">
-                <div class="brand-icon"></div>
-                Java Web Module
+            <div class="brand-menu-wrap">
+                <button type="button" class="brand" id="brandMenuTrigger" aria-expanded="false" aria-controls="lessonDropdown">
+                    <span class="brand-icon"></span>
+                    <span>Java Web Module</span>
+                    <span class="brand-chevron" aria-hidden="true">⌄</span>
+                </button>
+                <div class="lesson-dropdown" id="lessonDropdown" aria-label="Daftar pertemuan">
+                    <div class="dropdown-heading">DAFTAR PERTEMUAN</div>
+                    <div class="lesson-dropdown-list" id="lessonDropdownList"></div>
+                </div>
             </div>
             <div class="nav-links">
                 <button type="button" class="nav-link active-tab" aria-controls="part1" aria-pressed="true" onclick="openTab('part1', this)">Pertemuan 1 - 6</button>
@@ -40,6 +108,14 @@ h1,h2,h3,h4,h5{line-height:1.25;letter-spacing:-.025em}h3{font-size:clamp(1.15re
 
         <!-- ==================== TAB 1: PERTEMUAN 1 - 6 ==================== -->
         <div id="part1" class="tab-content" style="display: block;">
+            <div class="lesson-sticky-title" aria-live="polite">
+                <span class="lesson-sticky-mark" aria-hidden="true"></span>
+                <div>
+                    <p class="lesson-sticky-kicker">Sedang dipelajari</p>
+                    <h2 class="sticky-lesson-name">Pilih pertemuan</h2>
+                    <p class="lesson-sticky-subtitle sticky-lesson-topic">Judul materi akan mengikuti posisi scroll kamu.</p>
+                </div>
+            </div>
             <span class="section-label">Materi Dasar & Form Handling (1 - 6)</span>
             
             <!-- Pertemuan 1 -->
@@ -357,6 +433,14 @@ h1,h2,h3,h4,h5{line-height:1.25;letter-spacing:-.025em}h3{font-size:clamp(1.15re
 
         <!-- ==================== TAB 2: PERTEMUAN 7 - 10 ==================== -->
         <div id="part2" class="tab-content">
+            <div class="lesson-sticky-title" aria-live="polite">
+                <span class="lesson-sticky-mark" aria-hidden="true"></span>
+                <div>
+                    <p class="lesson-sticky-kicker">Sedang dipelajari</p>
+                    <h2 class="sticky-lesson-name">Pilih pertemuan</h2>
+                    <p class="lesson-sticky-subtitle sticky-lesson-topic">Judul materi akan mengikuti posisi scroll kamu.</p>
+                </div>
+            </div>
             <span class="section-label">Perulangan, Pop-up Dialog, & CSS Layout (7 - 10)</span>
             
             <!-- Pertemuan 7 -->
@@ -566,6 +650,14 @@ h1,h2,h3,h4,h5{line-height:1.25;letter-spacing:-.025em}h3{font-size:clamp(1.15re
 
         <!-- ==================== TAB 3: PERTEMUAN 11 - 21 ==================== -->
         <div id="part3" class="tab-content">
+            <div class="lesson-sticky-title" aria-live="polite">
+                <span class="lesson-sticky-mark" aria-hidden="true"></span>
+                <div>
+                    <p class="lesson-sticky-kicker">Sedang dipelajari</p>
+                    <h2 class="sticky-lesson-name">Pilih pertemuan</h2>
+                    <p class="lesson-sticky-subtitle sticky-lesson-topic">Judul materi akan mengikuti posisi scroll kamu.</p>
+                </div>
+            </div>
             <span class="section-label">Manipulasi JS, Event, MVC, & Servlet (11 - 21)</span>
             
             <!-- Pertemuan 11 -->
@@ -906,6 +998,41 @@ h1,h2,h3,h4,h5{line-height:1.25;letter-spacing:-.025em}h3{font-size:clamp(1.15re
 
     <!-- SCRIPTS INTERAKTIF & EVENT HANDLING -->
     <script>
+
+        // === Judul pertemuan tetap terlihat saat scroll ===
+        function updateStickyLessonTitles() {
+            var activeTab = Array.from(document.querySelectorAll('.tab-content')).find(function(tab) {
+                return window.getComputedStyle(tab).display !== 'none';
+            });
+            if (!activeTab) return;
+            var cards = Array.from(activeTab.querySelectorAll('.neo-box')).filter(function(card) {
+                return card.querySelector('.badge') && card.querySelector('h3');
+            });
+            if (!cards.length) return;
+            var marker = 155;
+            var current = cards[0];
+            cards.forEach(function(card) {
+                if (card.getBoundingClientRect().top <= marker) current = card;
+            });
+            var badge = current.querySelector('.badge');
+            var heading = current.querySelector('h3');
+            var label = badge ? badge.textContent.trim() : 'Materi pembelajaran';
+            var topic = heading ? heading.textContent.trim() : '';
+            activeTab.querySelectorAll('.sticky-lesson-name').forEach(function(el) { el.textContent = label; });
+            activeTab.querySelectorAll('.sticky-lesson-topic').forEach(function(el) { el.textContent = topic; });
+        }
+        var stickyTitleTick = false;
+        window.addEventListener('scroll', function() {
+            if (!stickyTitleTick) {
+                window.requestAnimationFrame(function() {
+                    updateStickyLessonTitles();
+                    stickyTitleTick = false;
+                });
+                stickyTitleTick = true;
+            }
+        }, { passive: true });
+        window.addEventListener('resize', updateStickyLessonTitles);
+
         // === Ganti Tab Menu ===
         function openTab(tabId, element) {
             var tabs = document.getElementsByClassName("tab-content");
@@ -919,6 +1046,7 @@ h1,h2,h3,h4,h5{line-height:1.25;letter-spacing:-.025em}h3{font-size:clamp(1.15re
             }
             document.getElementById(tabId).style.display = "block";
             element.classList.add("active-tab");
+            updateStickyLessonTitles();
             element.setAttribute("aria-pressed", "true");
             
             // Scroll ke atas tab-content secara smooth
@@ -1071,7 +1199,63 @@ h1,h2,h3,h4,h5{line-height:1.25;letter-spacing:-.025em}h3{font-size:clamp(1.15re
         window.onload = function() {
             runLiveClocks();
             runMarqueeSim();
+            updateStickyLessonTitles();
         };
     </script>
+
+<script>
+(function(){
+  function initLessonDropdown(){
+    var list=document.getElementById('lessonDropdownList');
+    var wrap=document.querySelector('.brand-menu-wrap');
+    var trigger=document.getElementById('brandMenuTrigger');
+    if(!list||!wrap||!trigger)return;
+    var tabIds=['part1','part2','part3'];
+    tabIds.forEach(function(tabId,groupIndex){
+      var tab=document.getElementById(tabId);
+      if(!tab)return;
+      var cards=Array.from(tab.children).filter(function(el){return el.classList && el.classList.contains('neo-box') && !el.classList.contains('nav-container');});
+      cards.forEach(function(card,index){
+        var badge=card.querySelector('.badge');
+        var heading=card.querySelector('h3');
+        if(!badge||!heading)return;
+        var raw=badge.textContent.replace(/\s+/g,' ').trim();
+        var topic=heading.textContent.replace(/\s+/g,' ').trim();
+        var numberMatch=raw.match(/Pertemuan\s+([0-9]+(?:\s*(?:&|dan)\s*[0-9]+)?)/i);
+        var number=numberMatch?numberMatch[1].replace(/\s+/g,' '):String(index+1);
+        var label='Pertemuan '+number;
+        var id='lesson-'+tabId+'-'+(index+1);
+        card.id=id;
+        card.setAttribute('data-lesson-label',label);
+        card.setAttribute('data-lesson-topic',topic);
+        var button=document.createElement('button');
+        button.type='button';
+        button.className='lesson-dropdown-item';
+        button.innerHTML='<strong></strong><span></span>';
+        button.querySelector('strong').textContent=label;
+        button.querySelector('span').textContent=topic;
+        button.addEventListener('click',function(){
+          if(typeof window.openTab==='function'){
+            var groupButton=document.querySelector('.nav-link[aria-controls="'+tabId+'"]');
+            if(groupButton)window.openTab(tabId,groupButton);
+            else {tabIds.forEach(function(id){var el=document.getElementById(id);if(el)el.style.display=id===tabId?'block':'none';});}
+          }else{tabIds.forEach(function(id){var el=document.getElementById(id);if(el)el.style.display=id===tabId?'block':'none';});}
+          wrap.classList.remove('dropdown-open');
+          trigger.setAttribute('aria-expanded','false');
+          setTimeout(function(){card.scrollIntoView({behavior:'smooth',block:'start'});},80);
+        });
+        list.appendChild(button);
+      });
+    });
+    trigger.addEventListener('click',function(){
+      var open=wrap.classList.toggle('dropdown-open');
+      trigger.setAttribute('aria-expanded',open?'true':'false');
+    });
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){wrap.classList.remove('dropdown-open');trigger.setAttribute('aria-expanded','false');trigger.blur();}});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initLessonDropdown);else initLessonDropdown();
+})();
+</script>
+
 </body>
 </html>
